@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DailyHoroscope"
         mc:Ignorable="d"
-        Title="Daily Horoscope" Height="350" Width="315" ResizeMode="CanResize">
+        Title="Daily Horoscope" Height="500" Width="700" ResizeMode="CanResize">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Options">
@@ -15,21 +15,92 @@
         </Menu>
         <Grid>
             <Canvas x:Name="backgroundView" Width="310" MinHeight="300" MaxHeight="300">
-                <Label x:Name="dateLabel" HorizontalAlignment="Center" FontWeight="Bold" Margin="100, 25, 0, 0" Foreground="PaleGreen"/>
-                <Label x:Name="horoscopeLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="Aqua" Height="70" Canvas.Left="25" Canvas.Top="80" Width="250"/>
-                <TextBlock x:Name="horoscopeTextBlock" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWithOverflow" Margin="25, 60, 0, 0" Width="250" Foreground="Aqua"/>
-                <Button Canvas.Left="5" Margin="0" Canvas.Top="180" Click="Button_Click">Aries</Button>
-                <Button Canvas.Left="5" Margin="0" Canvas.Top="210" Click="Button_Click">Taurus</Button>
-                <Button Canvas.Left="5" Margin="0" Canvas.Top="240" Click="Button_Click">Gemini</Button>
-                <Button Canvas.Left="5" Margin="0" Canvas.Top="270" Click="Button_Click">Cancer</Button>
-                <Button Canvas.Left="105" Margin="0" Canvas.Top="180" Click="Button_Click">Leo</Button>
-                <Button Canvas.Left="105" Margin="0" Canvas.Top="210" Click="Button_Click">Virgo</Button>
-                <Button Canvas.Left="105" Margin="0" Canvas.Top="240" Click="Button_Click">Libra</Button>
-                <Button Canvas.Left="105" Margin="0" Canvas.Top="270" Click="Button_Click">Scorpio</Button>
-                <Button Canvas.Left="205" Margin="0" Canvas.Top="180" Click="Button_Click">Sagittarius</Button>
-                <Button Canvas.Left="205" Margin="0" Canvas.Top="210" Click="Button_Click">Capricorn</Button>
-                <Button Canvas.Left="205" Margin="0" Canvas.Top="240" Click="Button_Click">Aquarius</Button>
-                <Button Canvas.Left="205" Margin="0" Canvas.Top="270" Click="Button_Click">Pisces</Button>
+                <Label x:Name="dateLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="PaleGreen" Canvas.Left="25" Height="45" Width="250" Canvas.Top="-20"/>
+                <TextBlock x:Name="horoscopeTextBlock" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWithOverflow" Width="400"  FontSize="14" FontStyle="Italic" Foreground="Aqua" Canvas.Left="-41" Canvas.Top="40"/>
+                <Button Canvas.Left="-170" Margin="0" Canvas.Top="172" Click="Button_Click">Aries
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/aries.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="-65" Margin="0" Canvas.Top="172" Click="Button_Click">Taurus
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/taurus.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="43" Margin="0" Canvas.Top="172" Click="Button_Click">Gemini
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/gemini.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="158" Margin="0" Canvas.Top="172" Click="Button_Click">Cancer
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/cancer.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="280" Margin="0" Canvas.Top="172" Click="Button_Click">Leo
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/leo.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="390" Margin="0" Canvas.Top="172" Click="Button_Click">Virgo
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/virgo.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="-170" Margin="0" Canvas.Top="280" Click="Button_Click">Libra
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/libra.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="-65" Margin="0" Canvas.Top="277" Click="Button_Click">Scorpio
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/scorpio.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="43" Margin="0" Canvas.Top="277" Click="Button_Click">Sagittarius
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/sagittarius.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="158" Margin="0" Canvas.Top="277" Click="Button_Click">Capricorn
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/capricorn.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="280" Margin="0" Canvas.Top="280" Click="Button_Click">Aquarius
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/aquarius.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Canvas.Left="390" Margin="0" Canvas.Top="280" Click="Button_Click">Pisces
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="Resources/pisces.png"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Canvas>
             <Panel.Background>
                 <ImageBrush ImageSource="Resources/starry_sky.jpg" Stretch="UniformToFill"/>

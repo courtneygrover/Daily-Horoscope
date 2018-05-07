@@ -98,6 +98,20 @@
   <ItemGroup>
     <Resource Include="Resources\starry_sky.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\aquarius.png" />
+    <Resource Include="Resources\aries.png" />
+    <Resource Include="Resources\cancer.png" />
+    <Resource Include="Resources\capricorn.png" />
+    <Resource Include="Resources\gemini.png" />
+    <Resource Include="Resources\leo.png" />
+    <Resource Include="Resources\libra.png" />
+    <Resource Include="Resources\pisces.png" />
+    <Resource Include="Resources\sagittarius.png" />
+    <Resource Include="Resources\scorpio.png" />
+    <Resource Include="Resources\taurus.png" />
+    <Resource Include="Resources\virgo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
