@@ -1,0 +1,39 @@
+﻿<Window x:Class="DailyHoroscope.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DailyHoroscope"
+        mc:Ignorable="d"
+        Title="Daily Horoscope" Height="350" Width="315" ResizeMode="CanResize">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Options">
+                <MenuItem Header="Exit" Click="Exit_Click"/>
+                <Separator/>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <Canvas x:Name="backgroundView" Width="310" MinHeight="300" MaxHeight="300">
+                <Label x:Name="dateLabel" HorizontalAlignment="Center" FontWeight="Bold" Margin="100, 25, 0, 0" Foreground="PaleGreen"/>
+                <Label x:Name="horoscopeLabel" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="Aqua" Height="70" Canvas.Left="25" Canvas.Top="80" Width="250"/>
+                <TextBlock x:Name="horoscopeTextBlock" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="WrapWithOverflow" Margin="25, 60, 0, 0" Width="250" Foreground="Aqua"/>
+                <Button Canvas.Left="5" Margin="0" Canvas.Top="180" Click="Button_Click">Aries</Button>
+                <Button Canvas.Left="5" Margin="0" Canvas.Top="210" Click="Button_Click">Taurus</Button>
+                <Button Canvas.Left="5" Margin="0" Canvas.Top="240" Click="Button_Click">Gemini</Button>
+                <Button Canvas.Left="5" Margin="0" Canvas.Top="270" Click="Button_Click">Cancer</Button>
+                <Button Canvas.Left="105" Margin="0" Canvas.Top="180" Click="Button_Click">Leo</Button>
+                <Button Canvas.Left="105" Margin="0" Canvas.Top="210" Click="Button_Click">Virgo</Button>
+                <Button Canvas.Left="105" Margin="0" Canvas.Top="240" Click="Button_Click">Libra</Button>
+                <Button Canvas.Left="105" Margin="0" Canvas.Top="270" Click="Button_Click">Scorpio</Button>
+                <Button Canvas.Left="205" Margin="0" Canvas.Top="180" Click="Button_Click">Saggitarius</Button>
+                <Button Canvas.Left="205" Margin="0" Canvas.Top="210" Click="Button_Click">Capricorn</Button>
+                <Button Canvas.Left="205" Margin="0" Canvas.Top="240" Click="Button_Click">Aquarius</Button>
+                <Button Canvas.Left="205" Margin="0" Canvas.Top="270" Click="Button_Click">Pisces</Button>
+            </Canvas>
+            <Panel.Background>
+                <ImageBrush ImageSource="Resources/starry_sky.jpg" Stretch="UniformToFill"/>
+            </Panel.Background>
+        </Grid>
+    </DockPanel>
+</Window>
