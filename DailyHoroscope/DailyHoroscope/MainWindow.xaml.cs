@@ -23,6 +23,10 @@ namespace DailyHoroscope
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private string[] zodiacs = { "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"};
+        Dictionary<String, String> horoscopes;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,6 +36,7 @@ namespace DailyHoroscope
         private void Init()
         {
             this.dateLabel.Content = DateTime.Today.DayOfWeek + ", " + DateTime.Now.ToString("MMMM") + " " + DateTime.Today.Day.ToString();
+            GetWebsiteData();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -49,6 +54,13 @@ namespace DailyHoroscope
 
         private string GetHoroscope(string zodiac)
         {
+             return zodiac + ": " + this.horoscopes[zodiac];
+        }
+
+        private void GetWebsiteData()
+        {
+            this.horoscopes = new Dictionary<string, string>();
+
             string data = "";
             string sURL = "http://www.starlightastrology.com/daily.htm";
             WebRequest wrGETURL = WebRequest.Create(sURL);
@@ -57,25 +69,25 @@ namespace DailyHoroscope
             StreamReader objReader = new StreamReader(objStream);
 
             string sLine = "";
-            int i = 0;
+            int zodiacNum = 0;
 
-            while (sLine != null)
+            while (sLine != null && zodiacNum < 12)
             {
-                i++;
                 sLine = objReader.ReadLine();
-                if (sLine != null && sLine.Contains("CHANGE " + zodiac.ToUpper() + " HERE"))
+                if (sLine != null && sLine.Contains("CHANGE " + this.zodiacs[zodiacNum].ToUpper() + " HERE"))
                 {
                     sLine = objReader.ReadLine();
-                    while (!sLine.Contains("END " + zodiac.ToUpper() + " HERE"))
+                    while (!sLine.Contains("END " + this.zodiacs[zodiacNum].ToUpper() + " HERE"))
                     {
                         data += sLine;
                         sLine = objReader.ReadLine();
-
                     }
+
+                    horoscopes.Add(this.zodiacs[zodiacNum], data);
+                    zodiacNum++;
+                    data = "";
                 }
             }
-
-            return zodiac + ": " + data;
         }
     }
 }

@@ -26,7 +26,7 @@
                 <Button Canvas.Left="105" Margin="0" Canvas.Top="210" Click="Button_Click">Virgo</Button>
                 <Button Canvas.Left="105" Margin="0" Canvas.Top="240" Click="Button_Click">Libra</Button>
                 <Button Canvas.Left="105" Margin="0" Canvas.Top="270" Click="Button_Click">Scorpio</Button>
-                <Button Canvas.Left="205" Margin="0" Canvas.Top="180" Click="Button_Click">Saggitarius</Button>
+                <Button Canvas.Left="205" Margin="0" Canvas.Top="180" Click="Button_Click">Sagittarius</Button>
                 <Button Canvas.Left="205" Margin="0" Canvas.Top="210" Click="Button_Click">Capricorn</Button>
                 <Button Canvas.Left="205" Margin="0" Canvas.Top="240" Click="Button_Click">Aquarius</Button>
                 <Button Canvas.Left="205" Margin="0" Canvas.Top="270" Click="Button_Click">Pisces</Button>
